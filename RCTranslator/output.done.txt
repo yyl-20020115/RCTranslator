@@ -16,6 +16,7 @@
 // ÖÐÎÄ(¼òÌå) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_NEUTRAL
 #pragma code_page(936)
 
 /////////////////////////////////////////////////////////////////////////////
