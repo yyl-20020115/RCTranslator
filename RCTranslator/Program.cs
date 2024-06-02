@@ -334,6 +334,21 @@ public class Program
             else if (sectionType == SectionType.StringTable)
             {
                 var parts = Split(_line, ' ', '"', StringSplitOptions.RemoveEmptyEntries);
+                if(parts.Length == 1) //if in two lines
+                {
+                    var following = reader.ReadLine();
+                    if (following != null) 
+                    {
+                        line += ' ';
+                        line += following.Trim();
+                        _line = line.Trim();
+                        parts = Split(_line, ' ', '"', StringSplitOptions.RemoveEmptyEntries);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
                 if (parts.Length == 2 && parts[1].StartsWith('"') && parts[1].EndsWith('"'))
                 {
                     parts[1] = parts[1].Trim('"');
