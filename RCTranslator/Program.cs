@@ -97,78 +97,45 @@ public class Program
     {
         if (string.IsNullOrEmpty(text)) return [];
         var parts = new List<string>();
-        var i = 0;
-        var p = 0;
-
-        var quoting = false;
-        for (i = p; i < text.Length; i++)
+        var builder = new StringBuilder();
+        for (int i = 0; i < text.Length; i++)
         {
-            if (text[i] == quote)
+            char c = text[i];
+            if (c == quote)
             {
-                quoting = !quoting;
-            }
-            if (!quoting && text[i] == seperator)
-            {
-                var part = text[p..i];
-                
-                if (part.Length > 0 && (options & StringSplitOptions.TrimEntries)
-                    == StringSplitOptions.TrimEntries)
+                builder.Clear();
+                builder.Append(c);
+                for (i++; i < text.Length; i++)
                 {
-                    part = part.Trim();
-                }
-                if(part.Length == 0)
-                {
-                    if ((options & StringSplitOptions.RemoveEmptyEntries)
-                        != StringSplitOptions.RemoveEmptyEntries)
+                    c = text[i];
+                    builder.Append(c);
+                    if (c == quote)
                     {
-                        parts.Add(part);
+                        parts.Add(builder.ToString());
+                        builder.Clear();
+                        break;
                     }
                 }
-                else
-                {
-                    if (part.Length == 1 && part[0] == seperator 
-                        && (options & StringSplitOptions.RemoveEmptyEntries) == StringSplitOptions.RemoveEmptyEntries)
-                    { 
-                    
-                    }
-                    else
-                    {
-                        parts.Add(part);
-                    }
-                }
-                i++;
-                p = i;
             }
-        }
-        if (p>0 && p<i)
-        {
-            var part = text[p..i];
-            if (part.Length > 0 && (options & StringSplitOptions.TrimEntries)
-                   == StringSplitOptions.TrimEntries)
+            else if(c == seperator)
             {
-                part = part.Trim();
-            }
-            if (part.Length == 0)
-            {
-                if ((options & StringSplitOptions.RemoveEmptyEntries)
-                    != StringSplitOptions.RemoveEmptyEntries)
+                if(builder.Length > 0)
                 {
-                    parts.Add(part);
+                    parts.Add(builder.ToString());
+                    builder.Clear();
                 }
+                continue;
             }
             else
             {
-                if (part.Length == 1 && part[0] == seperator
-                    && (options & StringSplitOptions.RemoveEmptyEntries) == StringSplitOptions.RemoveEmptyEntries)
-                {
-
-                }
-                else
-                {
-                    parts.Add(part);
-                }
+                builder.Append(c);
             }
         }
+        if (builder.Length > 0)
+        {
+            parts.Add(builder.ToString());
+        }
+
         return [.. parts];
     }
     public static string DoAsk(string result, ref string part)
@@ -190,6 +157,7 @@ public class Program
         }
         return result;
     }
+    public static string GetHeading(string text) => text[..(text.Length - text.TrimStart().Length)];
     public static async Task<int> Main(string[] args)
     {
         var sectionType = SectionType.Init;
@@ -199,6 +167,7 @@ public class Program
         string? line;
         while ((line = reader.ReadLine()) != null)
         {
+            var _head = GetHeading(line);
             var _line = line.Trim();
             if (_line.Length == 0
                 || _line.StartsWith("//")
@@ -297,7 +266,7 @@ public class Program
                         var result = parts[1].Length > 0 ? await CallOllama(apiUrl, $"请翻译:{parts[1]}") : string.Empty;
                         result = AskHuman ? DoAsk(result, ref parts[1]) : result;
                         parts[1] = $"\"{result + tail}\"";
-                        writer.WriteLine(string.Join(' ', parts));
+                        writer.WriteLine(_head + string.Join(' ', parts));
                     }
                     else
                     {
@@ -316,7 +285,7 @@ public class Program
                         var result = parts[0].Length > 0 ? await CallOllama(apiUrl, $"请翻译:{parts[0]}") : string.Empty;
                         result = AskHuman ? DoAsk(result, ref parts[0]) : result;
                         parts[0] = $"\"{result + tail}\"";
-                        writer.WriteLine(string.Join(' ', parts));
+                        writer.WriteLine(_head + string.Join(' ', parts));
                     }
                     else
                     {
@@ -337,7 +306,7 @@ public class Program
                     var result = await CallOllama(apiUrl, $"请翻译:{parts[1]}");
                     result = AskHuman ? DoAsk(result, ref parts[1]) : result;
                     parts[1] = $"\"{result}\"";
-                    writer.WriteLine(string.Join(' ', parts));
+                    writer.WriteLine(_head + string.Join(' ', parts));
                 }
                 else
                 {
