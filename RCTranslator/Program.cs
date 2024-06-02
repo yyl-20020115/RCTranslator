@@ -170,7 +170,7 @@ public class Program
         var count = lines.Count();
         if(count>0 && lines[^1].Trim() != "")
         {
-            count++;
+            //count++;
         }
         var sectionType = SectionType.Init;
 
@@ -319,7 +319,7 @@ public class Program
                         var result = parts[0].Length > 0 ? await CallOllama(apiUrl, $"请翻译:{parts[0]}") : string.Empty;
                         result = AskHuman ? DoAsk(result, ref parts[0]) : result;
                         parts[0] = $"\"{result + tail}\"";
-                        writer.WriteLine(_head + string.Join(' ', parts));
+                        writer.WriteLine(_head + "MENUITEM " + string.Join(',', parts));
                     }
                     else
                     {

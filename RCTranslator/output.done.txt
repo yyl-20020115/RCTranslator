@@ -912,213 +912,213 @@ IDR_MENU MENU
 BEGIN
     POPUP "文件(&F)"
     BEGIN
-        "打开(&O)"                     ID_OPEN
-        "关闭(&C)"                    ID_CLOSE
+        MENUITEM "打开(&O)",ID_OPEN
+        MENUITEM "关闭(&C)" ,ID_CLOSE
         MENUITEM SEPARATOR
-        "网络对战(&N)"                  ID_NETPLAY_CONNECT
-        "断开连接(&D)"               ID_NETPLAY_DISCONNECT
-        "聊天(&A)"                     ID_NETPLAY_CHAT
+        MENUITEM "网络对战(&N)",ID_NETPLAY_CONNECT
+        MENUITEM "断开连接(&D)",ID_NETPLAY_DISCONNECT
+        MENUITEM "聊天(&A)"                     ,ID_NETPLAY_CHAT
         MENUITEM SEPARATOR
-        "启动器(&L)"                 ID_LAUNCHER
+        MENUITEM "启动器(&L)"                 ,ID_LAUNCHER
         MENUITEM SEPARATOR
-        "ROM信息(&I)"                 ID_ROMINFO
-        "WAVE记录(&W)"              ID_WAVERECORD
+        MENUITEM "ROM信息(&I)"                 ,ID_ROMINFO
+        MENUITEM "WAVE记录(&W)"              ,ID_WAVERECORD
         MENUITEM SEPARATOR
         POPUP "最近使用的路径(&P)"
         BEGIN
-            "无"                         ID_MRU_PATH0
+            MENUITEM "无"                         ,ID_MRU_PATH0
         END
         POPUP "最近使用的文件(&F)"
         BEGIN
-            "无"                         ID_MRU_FILE0
+            MENUITEM "无"                         ,ID_MRU_FILE0
         END
         MENUITEM SEPARATOR
-        "退出(&X)"                     ID_EXIT
+        MENUITEM "退出(&X)"                    ,ID_EXIT
     END
     POPUP "编辑(&E)"
     BEGIN
-        "硬件重置(&R)"                 ID_HWRESET
-        "软件重置(&S)"                 ID_SWRESET
+      MENUITEM  "硬件重置(&R)"                ,ID_HWRESET
+      MENUITEM  "软件重置(&S)"                ,ID_SWRESET
         MENUITEM SEPARATOR
-        "暂停(&P)"                    ID_PAUSE
+      MENUITEM  "暂停(&P)"                   ,ID_PAUSE
         MENUITEM SEPARATOR
-        "加载状态"                   ID_STATE_LOAD
-        "保存状态"                   ID_STATE_SAVE
+      MENUITEM  "加载状态"                  ,ID_STATE_LOAD
+      MENUITEM  "保存状态"                  ,ID_STATE_SAVE
         POPUP "状态存储区"
         BEGIN
-            "存储区0"                        ID_STATE_SLOT0
-            "存储区1"                        ID_STATE_SLOT1
-            "存储区2"                        ID_STATE_SLOT2
-            "存储区3"                        ID_STATE_SLOT3
-            "存储区4"                        ID_STATE_SLOT4
-            "存储区5"                        ID_STATE_SLOT5
-            "存储区6"                        ID_STATE_SLOT6
-            "存储区7"                        ID_STATE_SLOT7
-            "存储区8"                        ID_STATE_SLOT8
-            "存储区9"                        ID_STATE_SLOT9
+          MENUITEM  "存储区0"                       ,ID_STATE_SLOT0
+          MENUITEM  "存储区1"                       ,ID_STATE_SLOT1
+          MENUITEM  "存储区2"                       ,ID_STATE_SLOT2
+          MENUITEM  "存储区3"                       ,ID_STATE_SLOT3
+          MENUITEM  "存储区4"                       ,ID_STATE_SLOT4
+          MENUITEM  "存储区5"                       ,ID_STATE_SLOT5
+          MENUITEM  "存储区6"                       ,ID_STATE_SLOT6
+          MENUITEM  "存储区7"                       ,ID_STATE_SLOT7
+          MENUITEM  "存储区8"                       ,ID_STATE_SLOT8
+          MENUITEM  "存储区9"                       ,ID_STATE_SLOT9
         END
         MENUITEM SEPARATOR
         POPUP "快速加载"
         BEGIN
-            "存储区0"                        ID_QUICKLOAD_SLOT0
-            "存储区1"                        ID_QUICKLOAD_SLOT1
-            "存储区2"                        ID_QUICKLOAD_SLOT2
-            "存储区3"                        ID_QUICKLOAD_SLOT3
-            "存储区4"                        ID_QUICKLOAD_SLOT4
-            "存储区5"                        ID_QUICKLOAD_SLOT5
-            "存储区6"                        ID_QUICKLOAD_SLOT6
-            "存储区7"                        ID_QUICKLOAD_SLOT7
-            "存储区8"                        ID_QUICKLOAD_SLOT8
-            "存储区9"                        ID_QUICKLOAD_SLOT9
+          MENUITEM  "存储区0"                       ,ID_QUICKLOAD_SLOT0
+          MENUITEM  "存储区1"                       ,ID_QUICKLOAD_SLOT1
+          MENUITEM  "存储区2"                       ,ID_QUICKLOAD_SLOT2
+          MENUITEM  "存储区3"                       ,ID_QUICKLOAD_SLOT3
+          MENUITEM  "存储区4"                       ,ID_QUICKLOAD_SLOT4
+          MENUITEM  "存储区5"                       ,ID_QUICKLOAD_SLOT5
+          MENUITEM  "存储区6"                       ,ID_QUICKLOAD_SLOT6
+          MENUITEM  "存储区7"                       ,ID_QUICKLOAD_SLOT7
+          MENUITEM  "存储区8"                       ,ID_QUICKLOAD_SLOT8
+          MENUITEM  "存储区9"                       ,ID_QUICKLOAD_SLOT9
         END
         POPUP "快速保存"
         BEGIN
-            "存储区0"                        ID_QUICKSAVE_SLOT0
-            "存储区1"                        ID_QUICKSAVE_SLOT1
-            "存储区2"                        ID_QUICKSAVE_SLOT2
-            "存储区3"                        ID_QUICKSAVE_SLOT3
-            "存储区4"                        ID_QUICKSAVE_SLOT4
-            "存储区5"                        ID_QUICKSAVE_SLOT5
-            "存储区6"                        ID_QUICKSAVE_SLOT6
-            "存储区7"                        ID_QUICKSAVE_SLOT7
-            "存储区8"                        ID_QUICKSAVE_SLOT8
-            "存储区9"                        ID_QUICKSAVE_SLOT9
+          MENUITEM  "存储区0"                       ,ID_QUICKSAVE_SLOT0
+          MENUITEM  "存储区1"                       ,ID_QUICKSAVE_SLOT1
+          MENUITEM  "存储区2"                       ,ID_QUICKSAVE_SLOT2
+          MENUITEM  "存储区3"                       ,ID_QUICKSAVE_SLOT3
+          MENUITEM  "存储区4"                       ,ID_QUICKSAVE_SLOT4
+          MENUITEM  "存储区5"                       ,ID_QUICKSAVE_SLOT5
+          MENUITEM  "存储区6"                       ,ID_QUICKSAVE_SLOT6
+          MENUITEM  "存储区7"                       ,ID_QUICKSAVE_SLOT7
+          MENUITEM  "存储区8"                       ,ID_QUICKSAVE_SLOT8
+          MENUITEM  "存储区9"                       ,ID_QUICKSAVE_SLOT9
         END
         MENUITEM SEPARATOR
         POPUP "录屏"
         BEGIN
-            "重放(&P)"                   ID_MOVIE_PLAY
+          MENUITEM  "重放(&P)"                  ,ID_MOVIE_PLAY
             MENUITEM SEPARATOR
-            "记录(&R)"                   ID_MOVIE_REC
-            "附加(&A)"                   ID_MOVIE_REC_APPEND
+          MENUITEM  "记录(&R)"                  ,ID_MOVIE_REC
+          MENUITEM  "附加(&A)"                  ,ID_MOVIE_REC_APPEND
             MENUITEM SEPARATOR
-            "停止(&S)"                     ID_MOVIE_STOP
+          MENUITEM  "停止(&S)"                    ,ID_MOVIE_STOP
             MENUITEM SEPARATOR
-            "信息(&I)"                     ID_MOVIE_INFO
+          MENUITEM  "信息(&I)"                    ,ID_MOVIE_INFO
             MENUITEM SEPARATOR
-            "AVI转换(&C)"              ID_MOVIE_CONVERT
+          MENUITEM  "AVI转换(&C)"             ,ID_MOVIE_CONVERT
         END
         MENUITEM SEPARATOR
         POPUP "磁盘"
         BEGIN
-            "弹出"                        ID_DISK_EJECT
+          MENUITEM  "弹出"                       ,ID_DISK_EJECT
             MENUITEM SEPARATOR
-            "磁盘1-A面"                  ID_DISK_0A
-            "磁盘1-B面"                  ID_DISK_0B
-            "磁盘2-A面"                  ID_DISK_1A
-            "磁盘2-B面"                  ID_DISK_1B
-            "磁盘3-A面"                  ID_DISK_2A
-            "磁盘3-B面"                  ID_DISK_2B
-            "磁盘4-A面"                  ID_DISK_3A
-            "磁盘4-B面"                  ID_DISK_3B
+          MENUITEM  "磁盘1-A面"                 ,ID_DISK_0A
+          MENUITEM  "磁盘1-B面"                 ,ID_DISK_0B
+          MENUITEM  "磁盘2-A面"                 ,ID_DISK_1A
+          MENUITEM  "磁盘2-B面"                 ,ID_DISK_1B
+          MENUITEM  "磁盘3-A面"                 ,ID_DISK_2A
+          MENUITEM  "磁盘3-B面"                 ,ID_DISK_2B
+          MENUITEM  "磁盘4-A面"                 ,ID_DISK_3A
+          MENUITEM  "磁盘4-B面"                 ,ID_DISK_3B
         END
         MENUITEM SEPARATOR
         POPUP "外部控制器"
         BEGIN
-            "无"                         ID_EXCTR_NONE
+          MENUITEM  "无"                        ,ID_EXCTR_NONE
             MENUITEM SEPARATOR
-            "Arkanoid paddle"              ID_EXCTR_PADDLE
-            "Hyper Shot"                   ID_EXCTR_HYPERSHOT
-            "Zapper"                       ID_EXCTR_ZAPPER
-            "FamilyBasic Keyboard"         ID_EXCTR_KEYBOARD
-            "Crazy Climber"                ID_EXCTR_CRAZYCLIMBER
-            "Top Rider"                    ID_EXCTR_TOPRIDER
-            "SpaceShadow Gun"              ID_EXCTR_SPACESHADOWGUN
-            "FamilyTrainer A side"         ID_EXCTR_FAMILYTRAINER_A
-            "FamilyTrainer B side"         ID_EXCTR_FAMILYTRAINER_B
-            "ExcitingBoxing"               ID_EXCTR_EXCITINGBOXING
-            "Mahjang"                      ID_EXCTR_MAHJANG
-            "Oekakids Tablet"              ID_EXCTR_OEKAKIDS_TABLET
-            "TurboFile"                    ID_EXCTR_TURBOFILE
-            "VS-Unisystem"                 ID_EXCTR_VSUNISYSTEM
-            "VS-Unisystem Zapper"          ID_EXCTR_VSUNISYSTEM_ZAPPER
+          MENUITEM  "Arkanoid paddle"             ,ID_EXCTR_PADDLE
+          MENUITEM  "Hyper Shot"                  ,ID_EXCTR_HYPERSHOT
+          MENUITEM  "Zapper"                      ,ID_EXCTR_ZAPPER
+          MENUITEM  "FamilyBasic Keyboard"        ,ID_EXCTR_KEYBOARD
+          MENUITEM  "Crazy Climber"               ,ID_EXCTR_CRAZYCLIMBER
+          MENUITEM  "Top Rider"                   ,ID_EXCTR_TOPRIDER
+          MENUITEM  "SpaceShadow Gun"             ,ID_EXCTR_SPACESHADOWGUN
+          MENUITEM  "FamilyTrainer A side"        ,ID_EXCTR_FAMILYTRAINER_A
+          MENUITEM  "FamilyTrainer B side"        ,ID_EXCTR_FAMILYTRAINER_B
+          MENUITEM  "ExcitingBoxing"              ,ID_EXCTR_EXCITINGBOXING
+          MENUITEM  "Mahjang"                     ,ID_EXCTR_MAHJANG
+          MENUITEM  "Oekakids Tablet"             ,ID_EXCTR_OEKAKIDS_TABLET
+          MENUITEM  "TurboFile"                   ,ID_EXCTR_TURBOFILE
+          MENUITEM  "VS-Unisystem"                ,ID_EXCTR_VSUNISYSTEM
+          MENUITEM  "VS-Unisystem Zapper"         ,ID_EXCTR_VSUNISYSTEM_ZAPPER
         END
         MENUITEM SEPARATOR
         POPUP "外设设备"
         BEGIN
-            "DATACH BarcodeBattler"        ID_BARCODEBATTLER
+          MENUITEM  "DATACH BarcodeBattler"       ,ID_BARCODEBATTLER
             MENUITEM SEPARATOR
-            "VS-Unisystem DipSwitch"       ID_VSUNISYSTEM_DIPSWITCH
+          MENUITEM  "VS-Unisystem DipSwitch"      ,ID_VSUNISYSTEM_DIPSWITCH
             MENUITEM SEPARATOR
             POPUP "Turbo File"
             BEGIN
-                "卡槽0"                        ID_TURBOFILE_BANK0
-                "卡槽1"                        ID_TURBOFILE_BANK1
-                "卡槽2"                        ID_TURBOFILE_BANK2
-                "卡槽3"                        ID_TURBOFILE_BANK3
+              MENUITEM  "卡槽0"                       ,ID_TURBOFILE_BANK0
+              MENUITEM  "卡槽1"                       ,ID_TURBOFILE_BANK1
+              MENUITEM  "卡槽2"                       ,ID_TURBOFILE_BANK2
+              MENUITEM  "卡槽3"                       ,ID_TURBOFILE_BANK3
             END
             MENUITEM SEPARATOR
             POPUP "磁带"
             BEGIN
-                "播放(&P)"                     ID_TAPE_PLAY
-                "记录(&R)"                   ID_TAPE_REC
+              MENUITEM  "播放(&P)"                    ,ID_TAPE_PLAY
+              MENUITEM  "记录(&R)"                  ,ID_TAPE_REC
                 MENUITEM SEPARATOR
-                "停止(&S)"                     ID_TAPE_STOP
+              MENUITEM  "停止(&S)"                    ,ID_TAPE_STOP
             END
         END
         MENUITEM SEPARATOR
-        "快照(&Z)"                 ID_SNAPSHOT
+      MENUITEM  "快照(&Z)"                ,ID_SNAPSHOT
     END
     POPUP "选项(&C)"
     BEGIN
-        "模拟(&E)"                 ID_CFG_EMULATOR
-        "图形(&G)"                 ID_CFG_GRAPHICS
-        "声音(&S)"                    ID_CFG_SOUND
-        "控制器(&C)"               ID_CFG_CONTROLLER
-        "摇杆轴模式(&J)"       ID_CFG_JOYAXIS
-        "快捷键(&K)"             ID_CFG_SHORTCUT
-        "文件夹(&P)"                   ID_CFG_FOLDER
-        "语言(&L)"                 ID_CFG_LANGUAGE
-        "录屏(&M)"                    ID_CFG_MOVIE
-        "游戏选项(&O)"              ID_CFG_GAMEOPTION
-        "调色板编辑(&Z)"             ID_CFG_PALETTE
+      MENUITEM  "模拟(&E)"                ,ID_CFG_EMULATOR
+      MENUITEM  "图形(&G)"                ,ID_CFG_GRAPHICS
+      MENUITEM  "声音(&S)"                   ,ID_CFG_SOUND
+      MENUITEM  "控制器(&C)"              ,ID_CFG_CONTROLLER
+      MENUITEM  "摇杆轴模式(&J)"      ,ID_CFG_JOYAXIS
+      MENUITEM  "快捷键(&K)"            ,ID_CFG_SHORTCUT
+      MENUITEM  "文件夹(&P)"                  ,ID_CFG_FOLDER
+      MENUITEM  "语言(&L)"                ,ID_CFG_LANGUAGE
+      MENUITEM  "录屏(&M)"                   ,ID_CFG_MOVIE
+      MENUITEM  "游戏选项(&O)"             ,ID_CFG_GAMEOPTION
+      MENUITEM  "调色板编辑(&Z)"            ,ID_CFG_PALETTE
         MENUITEM SEPARATOR
-        "全屏"                  ID_FULLSCREEN
+      MENUITEM  "全屏"                 ,ID_FULLSCREEN
         POPUP "缩放"
         BEGIN
-            "1倍"                           ID_ZOOMx1
-            "2倍"                           ID_ZOOMx2
-            "3倍"                           ID_ZOOMx3
-            "4倍"                           ID_ZOOMx4
+          MENUITEM  "1倍"                          ,ID_ZOOMx1
+          MENUITEM  "2倍"                          ,ID_ZOOMx2
+          MENUITEM  "3倍"                          ,ID_ZOOMx3
+          MENUITEM  "4倍"                          ,ID_ZOOMx4
         END
         POPUP "过滤"
         BEGIN
-            "无"                         ID_FILTER_NONE
-            "2xSaI"                        ID_FILTER_2XSAI
-            "Super2xSaI"                   ID_FILTER_SUPER2XSAI
-            "SuperEagle"                   ID_FILTER_SUPEREAGLE
-            "Scale2x"                      ID_FILTER_SCALE2X
-            "hq2x"                         ID_FILTER_HQ2X
-            "lq2x"                         ID_FILTER_LQ2X
+          MENUITEM  "无"                        ,ID_FILTER_NONE
+          MENUITEM  "2xSaI"                       ,ID_FILTER_2XSAI
+          MENUITEM  "Super2xSaI"                  ,ID_FILTER_SUPER2XSAI
+          MENUITEM  "SuperEagle"                  ,ID_FILTER_SUPEREAGLE
+          MENUITEM  "Scale2x"                     ,ID_FILTER_SCALE2X
+          MENUITEM  "hq2x"                        ,ID_FILTER_HQ2X
+          MENUITEM  "lq2x"                        ,ID_FILTER_LQ2X
         END
         MENUITEM SEPARATOR
-        "显示电视帧"             ID_TVFRAME
-        "显示帧率"                  ID_FPSDISP
+      MENUITEM  "显示电视帧"            ,ID_TVFRAME
+      MENUITEM  "显示帧率"                 ,ID_FPSDISP
     END
     POPUP "工具(&T)"
     BEGIN
-        "作弊支持(&S)"            ID_SEARCH
-        "作弊代码(&C)"               ID_CHEAT
+      MENUITEM  "作弊支持(&S)"           ,ID_SEARCH
+      MENUITEM  "作弊代码(&C)"              ,ID_CHEAT
         MENUITEM SEPARATOR
-        "启用作弊(&E)"             ID_CHEAT_ENABLE
-        "禁用作弊(&D)"            ID_CHEAT_DISABLE
+      MENUITEM  "启用作弊(&E)"            ,ID_CHEAT_ENABLE
+      MENUITEM  "禁用作弊(&D)"           ,ID_CHEAT_DISABLE
         MENUITEM SEPARATOR
-        "游戏金手指(&G)"               ID_GENIE
+      MENUITEM  "游戏金手指(&G)"              ,ID_GENIE
         MENUITEM SEPARATOR
-        "自动IPS补丁(&I)"           ID_AUTOIPS
+      MENUITEM  "自动IPS补丁(&I)"          ,ID_AUTOIPS
         MENUITEM SEPARATOR
         POPUP "查看器(&V)"
         BEGIN
-            "图案查看器(&P)"           ID_VIEW_PATTERN
-            "名称查看器(&N)"         ID_VIEW_NAMETABLE
-            "色板查看器(&C)"           ID_VIEW_PALETTE
+          MENUITEM  "图案查看器(&P)"          ,ID_VIEW_PATTERN
+          MENUITEM  "名称查看器(&N)"        ,ID_VIEW_NAMETABLE
+          MENUITEM  "色板查看器(&C)"          ,ID_VIEW_PALETTE
             MENUITEM SEPARATOR
-            "内存查看器(&M)"            ID_VIEW_MEMORY
+          MENUITEM  "内存查看器(&M)"           ,ID_VIEW_MEMORY
         END
     END
     POPUP "帮助(&H)"
     BEGIN
-        "关于(&A)"                    ID_ABOUT
+      MENUITEM  "关于(&A)"                   ,ID_ABOUT
     END
 END
 
@@ -1126,34 +1126,34 @@ IDR_LCH_MENU MENU
 BEGIN
     POPUP "列表选择(&L)"
     BEGIN
-        "列表0"                        ID_LCH_LIST0
-        "列表1"                        ID_LCH_LIST1
-        "列表2"                        ID_LCH_LIST2
-        "列表3"                        ID_LCH_LIST3
-        "列表4"                        ID_LCH_LIST4
-        "列表5"                        ID_LCH_LIST5
-        "列表6"                        ID_LCH_LIST6
-        "列表7"                        ID_LCH_LIST7
-        "列表8"                        ID_LCH_LIST8
-        "列表9"                        ID_LCH_LIST9
+      MENUITEM  "列表0"                       ,ID_LCH_LIST0
+      MENUITEM  "列表1"                       ,ID_LCH_LIST1
+      MENUITEM  "列表2"                       ,ID_LCH_LIST2
+      MENUITEM  "列表3"                       ,ID_LCH_LIST3
+      MENUITEM  "列表4"                       ,ID_LCH_LIST4
+      MENUITEM  "列表5"                       ,ID_LCH_LIST5
+      MENUITEM  "列表6"                       ,ID_LCH_LIST6
+      MENUITEM  "列表7"                       ,ID_LCH_LIST7
+      MENUITEM  "列表8"                       ,ID_LCH_LIST8
+      MENUITEM  "列表9"                       ,ID_LCH_LIST9
     END
     POPUP "编辑(&E)"
     BEGIN
-        "NES标头编辑(&H)"          ID_LCH_HEADEREDIT
+      MENUITEM  "NES标头编辑(&H)"         ,ID_LCH_HEADEREDIT
     END
     POPUP "选项(&C)"
     BEGIN
-        "文件夹列表(&F)"              ID_LCH_FOLDER
-        "显示列(&D)"           ID_LCH_DISPEDIT
+      MENUITEM  "文件夹列表(&F)"             ,ID_LCH_FOLDER
+      MENUITEM  "显示列(&D)"          ,ID_LCH_DISPEDIT
     END
-    "刷新(&R)"                  ID_LCH_REFRESH
+  MENUITEM  "刷新(&R)"                 ,ID_LCH_REFRESH
 END
 
 IDR_SCH_MENU MENU
 BEGIN
     POPUP "--"
     BEGIN
-        "代码追加"                  ID_SCH_APPEND
+      MENUITEM  "代码追加"                 ,ID_SCH_APPEND
     END
 END
 
