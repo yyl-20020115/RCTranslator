@@ -160,7 +160,7 @@ BEGIN
     CONTROL         "显示240线",IDC_GRA_ALLLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,30,90,10
     CONTROL         "显示帧率",IDC_GRA_FPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,30,95,10
     CONTROL         "精灵无限制",IDC_GRA_ALLSPRITE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,45,90,10
-    CONTROL         "虚拟电视模式（扫描线）",IDC_GRA_SCANLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,45,95,10
+    CONTROL         "虚拟电视模式(扫描线)",IDC_GRA_SCANLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,115,45,95,10
     CONTROL         "屏幕左侧修剪",IDC_GRA_LEFTCLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,60,90,10
     CONTROL         "Slider1",IDC_GRA_SCANLINE_SLIDER,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,110,58,71,12
     CTEXT           "",IDC_GRA_SCANLINE_COLOR,182,58,25,12,SS_CENTERIMAGE | SS_SUNKEN
@@ -686,7 +686,7 @@ FONT 8, "MS Sans Serif", 0, 0, 0x1
 BEGIN
     EDITTEXT        IDC_NCT_EDIT,0,115,145,12,ES_AUTOHSCROLL
     EDITTEXT        IDC_NCT_MESSAGE,0,0,185,110,ES_MULTILINE | ES_AUTOVSCROLL | ES_NOHIDESEL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | NOT WS_TABSTOP
-    PUSHBUTTON      "发送（&S）",IDC_NCT_SEND,150,114,30,14
+    PUSHBUTTON      "发送(&S)",IDC_NCT_SEND,150,114,30,14
 END
 
 IDD_CODEINPUT DIALOG 0, 0, 166, 79
@@ -1163,30 +1163,30 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR "ERROR"
+    IDS_ERROR "错误"
     IDS_ERROR_STARTUP "无法启动"
     IDS_ERROR_UNKNOWN "发生了一个原因不明的错误"
-    IDS_ERROR_OPEN "不要打开一个%s文件。"
-    IDS_ERROR_READ "无法读取文件。"
-    IDS_ERROR_WRITE "写入文件失败。"
-    IDS_ERROR_OUTOFMEMORY "内存不足。"
+    IDS_ERROR_OPEN "无法打开 %s 文件"
+    IDS_ERROR_READ "无法读取文件"
+    IDS_ERROR_WRITE "写入文件失败"
+    IDS_ERROR_OUTOFMEMORY "内存不足"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR_ILLEGALOPCODE "执行了一个未定义的命令。"
-    IDS_ERROR_UNSUPPORTFORMAT "无法识别的格式。"
-    IDS_ERROR_INVALIDNESHEADER "NES头部异常。"
-    IDS_ERROR_SMALLFILE "文件大小太小。"
-    IDS_ERROR_UNSUPPORTMAPPER "Mapper %d 未被支持。"
+    IDS_ERROR_ILLEGALOPCODE "执行了一个未定义的命令"
+    IDS_ERROR_UNSUPPORTFORMAT "无法识别的格式"
+    IDS_ERROR_INVALIDNESHEADER "NES头部异常"
+    IDS_ERROR_SMALLFILE "文件大小太小"
+    IDS_ERROR_UNSUPPORTMAPPER "Mapper %d 未被支持"
     IDS_ERROR_NODISKBIOS "未找到DISKSYS.ROM"
-    IDS_ERROR_UNSUPPORTDISK "许多磁盘不支持超过8个G。"
-    IDS_ERROR_ILLEGALDISKSIZE "磁盘容量异常。"
+    IDS_ERROR_UNSUPPORTDISK "许多磁盘不支持超过8个"
+    IDS_ERROR_ILLEGALDISKSIZE "磁盘容量异常"
 END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR_ILLEGALMAPPERNO "Mapper号码错误，它应在0（包含）到255（包含）之间。"
+    IDS_ERROR_ILLEGALMAPPERNO "Mapper号码错误，它应在0(包含)到255(包含)之间。"
     IDS_ERROR_ILLEGALHEADER "NES具有非法标头，由此可能出现运行异常。是否继续执行？"
     IDS_ERROR_ILLEGALSTATECRC "因为记录的CRC不同，由此可能无法正常加载。确定加载？"
     IDS_ERROR_ILLEGALMOVIECRC "因为记录的CRC不同，由此可能造成无法正常回放。确定执行回放？"
@@ -1202,7 +1202,7 @@ BEGIN
     IDS_ERROR_NETWORKDISCONNECT "网络已断开。"
     IDS_ERROR_NETWORKERROR "网络错误。"
     IDS_ERROR_NETWORKERROR_VERSION "Virtual NES版本不同。"
-    IDS_ERROR_NETWORKERROR_CRC "游戏不同。（PRG CRC 不同）"
+    IDS_ERROR_NETWORKERROR_CRC "游戏不同。(PRG CRC 不同)"
 END
 
 STRINGTABLE
@@ -1236,7 +1236,7 @@ BEGIN
     IDS_EMU_PRIORITY_NORMAL "正常"
     IDS_EMU_PRIORITY_HIGHER "较高"
     IDS_EMU_PRIORITY_MOSTHIGHER "最高"
-    IDS_EMU_PRIORITY_REALTIME "实时（危险）"
+    IDS_EMU_PRIORITY_REALTIME "实时(危险)"
 END
 
 STRINGTABLE
@@ -1259,7 +1259,7 @@ BEGIN
     IDS_OPT_RENDER_POST_ALL "扫描线类型1。"
     IDS_OPT_RENDER_PRE_ALL "扫描线类型2。"
     IDS_OPT_RENDER_POST "扫描线类型3"
-    IDS_OPT_RENDER_PRE "扫描线类型4（默认）"
+    IDS_OPT_RENDER_PRE "扫描线类型4(默认)"
     IDS_OPT_RENDER_TILE "Tile"
     IDS_OPT_IRQ_HSYNC "H-SYNC"
     IDS_OPT_IRQ_CLOCK "CLOCK"
@@ -1277,4 +1277,255 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_CUT_OPEN "开放"
+    IDS_CUT_OPEN "打开"
+    IDS_CUT_CLOSE "关闭"
+    IDS_CUT_LAUNCHER "启动器"
+    IDS_CUT_ROMINFO "ROM信息"
+    IDS_CUT_WAVERECORD "WAVE录音"
+    IDS_CUT_NETPLAY_CONNECT "网络对战"
+    IDS_CUT_NETPLAY_DISCONNECT "断开连接"
+    IDS_CUT_NETPLAY_CHAT "聊天"
+    IDS_CUT_EXIT "退出"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_HWRESET "硬件重置"
+    IDS_CUT_SWRESET "软件重置"
+    IDS_CUT_PAUSE "暂停(切换)"
+    IDS_CUT_THROTTLE "速度控制模式(切换)"
+    IDS_CUT_FRAMESKIP_AUTO "自动跳帧"
+    IDS_CUT_FRAMESKIP_UP "跳帧+1"
+    IDS_CUT_FRAMESKIP_DOWN "跳帧-1"
+    IDS_CUT_ONEFRAME "单步(暂停)"
+    IDS_CUT_KEYTHROTTLE "速度控制"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_STATE_LOAD "加载状态"
+    IDS_CUT_STATE_SAVE "保存状态"
+    IDS_CUT_STATE_UP "状态存储区+1"
+    IDS_CUT_STATE_DOWN "状态存储区-1"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_STATE_SLOT0 "状态存储区0"
+    IDS_CUT_STATE_SLOT1 "状态存储区1"
+    IDS_CUT_STATE_SLOT2 "状态存储区2"
+    IDS_CUT_STATE_SLOT3 "状态存储区3"
+    IDS_CUT_STATE_SLOT4 "状态存储区4"
+    IDS_CUT_STATE_SLOT5 "状态存储区5"
+    IDS_CUT_STATE_SLOT6 "状态存储区6"
+    IDS_CUT_STATE_SLOT7 "状态存储区7"
+    IDS_CUT_STATE_SLOT8 "状态存储区8"
+    IDS_CUT_STATE_SLOT9 "状态存储区9"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_QUICKLOAD_SLOT0 "快速加载状态0"
+    IDS_CUT_QUICKLOAD_SLOT1 "快速加载状态1"
+    IDS_CUT_QUICKLOAD_SLOT2 "快速加载状态2"
+    IDS_CUT_QUICKLOAD_SLOT3 "快速加载状态3"
+    IDS_CUT_QUICKLOAD_SLOT4 "快速加载状态4"
+    IDS_CUT_QUICKLOAD_SLOT5 "快速加载状态5"
+    IDS_CUT_QUICKLOAD_SLOT6 "快速加载状态6"
+    IDS_CUT_QUICKLOAD_SLOT7 "快速加载状态7"
+    IDS_CUT_QUICKLOAD_SLOT8 "快速加载状态8"
+    IDS_CUT_QUICKLOAD_SLOT9 "快速加载状态9"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_QUICKSAVE_SLOT0 "快速保存状态0"
+    IDS_CUT_QUICKSAVE_SLOT1 "快速保存状态1"
+    IDS_CUT_QUICKSAVE_SLOT2 "快速保存状态2"
+    IDS_CUT_QUICKSAVE_SLOT3 "快速保存状态3"
+    IDS_CUT_QUICKSAVE_SLOT4 "快速保存状态4"
+    IDS_CUT_QUICKSAVE_SLOT5 "快速保存状态5"
+    IDS_CUT_QUICKSAVE_SLOT6 "快速保存状态6"
+    IDS_CUT_QUICKSAVE_SLOT7 "快速保存状态7"
+    IDS_CUT_QUICKSAVE_SLOT8 "快速保存状态8"
+    IDS_CUT_QUICKSAVE_SLOT9 "快速保存状态9"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_DISK_EJECT "弹出磁盘"
+    IDS_CUT_DISK_0A "磁盘1-A面"
+    IDS_CUT_DISK_0B "磁盘1-B面"
+    IDS_CUT_DISK_1A "磁盘2-A面"
+    IDS_CUT_DISK_1B "磁盘2-B面"
+    IDS_CUT_DISK_2A "磁盘3-A面"
+    IDS_CUT_DISK_2B "磁盘3-B面"
+    IDS_CUT_DISK_3A "磁盘4-A面"
+    IDS_CUT_DISK_3B "磁盘4-B面"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_SNAPSHOT "快照"
+    IDS_CUT_FPSDISP "显示帧率(切换)"
+    IDS_CUT_TVASPECT "电视横纵比矫正(切换)"
+    IDS_CUT_TVFRAME "电视帧显示(切换)"
+    IDS_CUT_SCANLINE "虚拟电视模式(切换)"
+    IDS_CUT_ALLLINE "显示240行(切换)"
+    IDS_CUT_ALLSPRITE "无限精灵(切换)"
+    IDS_CUT_SYNCDRAW "同步绘画(切换)"
+    IDS_CUT_FITSCREEN "调整屏幕大小(切换)"
+    IDS_CUT_LEFTCLIP "屏幕左侧修剪(切换)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_MOVIE_INFO "录屏信息"
+    IDS_CUT_MOVIE_PLAY "录屏播放"
+    IDS_CUT_MOVIE_REC "录屏记录"
+    IDS_CUT_MOVIE_REC_APPEND "添加录屏记录"
+    IDS_CUT_MOVIE_STOP "录屏停止"
+    IDS_CUT_MOVIE_CONVERT "AVI转换"
+    IDS_CUT_TAPE_PLAY "播放磁带"
+    IDS_CUT_TAPE_REC "记录磁带"
+    IDS_CUT_TAPE_STOP "停止磁带"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_ZOOMx1 "缩放1倍"
+    IDS_CUT_ZOOMx2 "缩放2倍"
+    IDS_CUT_ZOOMx3 "缩放3倍"
+    IDS_CUT_ZOOMx4 "缩放4倍"
+    IDS_CUT_FULLSCREEN "全屏(切换)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_MUTE_MASTER "主控静音(切换)"
+    IDS_CUT_MUTE_RECTANGLE1 "方波1静音(切换）"
+    IDS_CUT_MUTE_RECTANGLE2 "方波2静音(切换）"
+    IDS_CUT_MUTE_TRIANGLE "三角波静音(切换）"
+    IDS_CUT_MUTE_NOISE "噪音静音(切换）"
+    IDS_CUT_MUTE_DPCM "DPCM静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL1 "外部通道1静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL2 "外部通道2静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL3 "外部通道3静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL4 "外部通道4静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL5 "外部通道5静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL6 "外部通道6静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL7 "外部通道7静音(切换）"
+    IDS_CUT_MUTE_EXTERNAL8 "外部通道8静音(切换）"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_SEARCH "作弊支持"
+    IDS_CUT_CHEAT "作弊代码"
+    IDS_CUT_CHEAT_ENABLE "开启作弊模式"
+    IDS_CUT_CHEAT_DISABLE "关闭作弊模式"
+    IDS_CUT_GENIE "游戏金手指"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUT_VIEW_PATTERN "图案查看器"
+    IDS_CUT_VIEW_NAMETABLE "名称表查看器"
+    IDS_CUT_VIEW_PALETTE "调色板查看器"
+    IDS_CUT_VIEW_MEMORY "内存查看器"
+    IDS_CUT_VIEW_WATCH "内存监视器"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LCH_LISTUPDATE "更新中... (%d/%d))"
+    IDS_LCH_HEADERREWRITE "确定要更新吗？"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_LCH_FILENAME "文件名"
+    IDS_LCH_PATH "路径"
+    IDS_LCH_MAPPER "Mapper"
+    IDS_LCH_PRG "PRG"
+    IDS_LCH_CHR "CHR"
+    IDS_LCH_ALLCRC "所有CRC"
+    IDS_LCH_PRGCRC "PRG CRC"
+    IDS_LCH_INFO "信息"
+    IDS_LCH_DATABASE "DB 检查"
+    IDS_LCH_TITLE "标题"
+    IDS_LCH_COUNTRY "国家"
+    IDS_LCH_MANUFACTURER "制造商"
+    IDS_LCH_SALEDATE "销售日期"
+    IDS_LCH_PRICE "价格"
+    IDS_LCH_GENRE "类型"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NET_NOCONNECT "无连接。"
+    IDS_NET_ACCEPTING "等待客户端。"
+    IDS_NET_CONNECTING "已连接到服务器。"
+    IDS_NET_CALCULATING "计算网络延迟。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CHT_CHEATCODE "作弊代码"
+    IDS_CHT_COMMENT "注释"
+    IDS_CHT_ADDRESS "地址"
+    IDS_CHT_DATA_NOW "现在"
+    IDS_CHT_DATA_OLD "旧的"
+END
+
+#endif    // 中文(简体) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""virtuanesres.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
