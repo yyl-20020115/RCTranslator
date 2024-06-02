@@ -165,12 +165,17 @@ public class Program
 
         Encoding encoding = Encoding.GetEncoding("GB2312");
 
+
+        var lines = File.ReadAllLines("output.txt", encoding);
+        var count = lines.Count();
+
         var sectionType = SectionType.Init;
+
         using var writer = new StreamWriter("output.txt",
             encoding,
             new FileStreamOptions { 
                 Access = FileAccess.Write, 
-                Mode = FileMode.Create,
+                Mode = FileMode.Append,
                 Share = FileShare.ReadWrite });
 
         using var reader = new StreamReader("input.txt", 
@@ -181,16 +186,21 @@ public class Program
                 Share = FileShare.Read
             });
 
+        var index = 0;
         string? line;
         while ((line = reader.ReadLine()) != null)
         {
+            var skip = index++ <= count;
+            Console.WriteLine(line);
+
             var _head = GetHeading(line);
             var _line = line.Trim();
             if (_line.Length == 0
                 || _line.StartsWith("//")
                 || _line.StartsWith('#'))
             {
-                writer.WriteLine(line);
+                if (!skip)
+                   writer.WriteLine(line);
             }
 
             if (_line.StartsWith("// Version"))
@@ -221,6 +231,7 @@ public class Program
             {
                 continue;
             }
+            if (skip) continue;
 
             if (sectionType == SectionType.Version)
             {
@@ -330,7 +341,10 @@ public class Program
                     writer.WriteLine(line);
                 }
             }
-            writer.Flush();
+            if (!skip)
+            {
+                writer.Flush();
+            }
         }
         return 0;
     }
