@@ -84,9 +84,9 @@ public class Program
         {
             if (string.IsNullOrEmpty(_line)) continue;
             var res = JsonSerializer.Deserialize<Response>(_line, options);
-            list.Add(res);
+            if(res!=null) list.Add(res);
         }
-        return string.Join("", list);
+        return string.Join(string.Empty, list);
     }
     public static async Task<int> Main(string[] args)
     {
@@ -97,7 +97,9 @@ public class Program
         string? line;
         while ((line = reader.ReadLine()) != null)
         {
+            //TODO: Parse and try to know which part of the line should be translated into Chinese
             var ret = await CallOllama(apiUrl, $"请翻译{line}");
+            //TODO: Copy the untranslated line or write the translated line
 
             writer.WriteLine(ret);
             writer.Flush();
