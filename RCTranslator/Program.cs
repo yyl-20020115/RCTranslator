@@ -168,7 +168,6 @@ public class Program
 
         var lines = File.ReadAllLines("output.txt", encoding);
         var count = lines.Count();
-
         var sectionType = SectionType.Init;
 
         using var writer = new StreamWriter("output.txt",
@@ -186,11 +185,12 @@ public class Program
                 Share = FileShare.Read
             });
 
-        var index = 0;
+        var index = 1;
         string? line;
         while ((line = reader.ReadLine()) != null)
         {
-            var skip = index++ <= count;
+            var skip = ++index <= count+3;
+
             Console.WriteLine(line);
 
             var _head = GetHeading(line);
