@@ -122,8 +122,7 @@ BEGIN
     GROUPBOX        "CPU Core",IDC_STATIC,4,5,211,25
     CONTROL         "Ignore illegal opcode",IDC_EMU_ILLEGALOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,15,90,10
     GROUPBOX        "Peripheral equipment",IDC_STATIC,4,35,211,25
-    CONTROL         "Enable NES type 4 player adapter",IDC_EMU_FOURPLAYER,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,45,135,10
+    CONTROL         "Enable NES type 4 player adapter",IDC_EMU_FOURPLAYER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,45,135,10
     GROUPBOX        "Frame rate control",IDC_STATIC,4,65,211,55
     CONTROL         "Auto frame skip",IDC_EMU_AUTOFRAMESKIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,75,65,10
     CONTROL         "Throttle use",IDC_EMU_THROTTLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,90,60,10
@@ -132,18 +131,14 @@ BEGIN
     CTEXT           "",IDC_EMU_FPS,181,87,25,15,SS_CENTERIMAGE | SS_SUNKEN
     CONTROL         "Disksystem throttle use",IDC_EMU_DISKTHROTTLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,105,100,10
     GROUPBOX        "Othres",IDC_STATIC,4,125,211,130
-    CONTROL         "Prohibition of double activation",IDC_EMU_DOUBLEEXECUTE,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,135,195,10
-    CONTROL         "Launcher is started simultaneously with a startup",IDC_EMU_STARTUPLAUNCHER,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,150,195,10
-    CONTROL         "Switch to fullscreen on ROM load",IDC_EMU_LOADFULLSCREEN,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,165,195,10
+    CONTROL         "Prohibition of double activation",IDC_EMU_DOUBLEEXECUTE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,135,195,10
+    CONTROL         "Launcher is started simultaneously with a startup",IDC_EMU_STARTUPLAUNCHER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,150,195,10
+    CONTROL         "Switch to fullscreen on ROM load",IDC_EMU_LOADFULLSCREEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,165,195,10
     CONTROL         "CRC check of a state/movie",IDC_EMU_CRCCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,180,195,10
     CONTROL         "Background movement",IDC_EMU_BACKGROUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,195,95,10
     LTEXT           "Priority",IDC_STATIC,110,195,30,10,SS_CENTERIMAGE
     COMBOBOX        IDC_EMU_PRIORITY_COMBO,145,193,62,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
-    CONTROL         "Picture of a snapshot is taken by PNG",IDC_EMU_PNGSNAPSHOT,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,211,195,10
+    CONTROL         "Picture of a snapshot is taken by PNG",IDC_EMU_PNGSNAPSHOT, "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,211,195,10
     CONTROL         "Use JoystickID",IDC_EMU_NOJOYSTICKID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,225,195,10
     CONTROL         "Pauses at launcher active",IDC_EMU_PAUSELAUNCHER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,240,195,10
 END
@@ -1188,23 +1183,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR_ILLEGALMAPPERNO 
-                            "Mapper please appoint numerical value from 0 to 255."
+    IDS_ERROR_ILLEGALMAPPERNO "Mapper please appoint numerical value from 0 to 255."
     IDS_ERROR_ILLEGALHEADER "Because a NES header is illegal,\n there can be the thing that does not work normally.\nDo execute?"
-    IDS_ERROR_ILLEGALSTATECRC 
-                            "Because recorded CRC is different,\n there is the case that cannot load normally.\nDo load?"
-    IDS_ERROR_ILLEGALMOVIECRC 
-                            "Because recorded CRC is different,\n there can be the thing that cannot playback normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEVER 
-                            "Because a recorded version is different,\n there can be the thing that cannot playback normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEOLD 
-                            "Because a version of a movie file is old, cannot playback."
-    IDS_ERROR_ILLEGALMOVIECRC_A 
-                            "Because recorded CRC is different,\n there can be the thing that there is not append record normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEVER_A 
-                            "Because a recorded version is different,\n there can be the thing that there is not append record normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEOLD_A 
-                            "Because a version of a movie file is old,\n there is not append record."
+    IDS_ERROR_ILLEGALSTATECRC "Because recorded CRC is different,\n there is the case that cannot load normally.\nDo load?"
+    IDS_ERROR_ILLEGALMOVIECRC "Because recorded CRC is different,\n there can be the thing that cannot playback normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEVER "Because a recorded version is different,\n there can be the thing that cannot playback normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEOLD "Because a version of a movie file is old, cannot playback."
+    IDS_ERROR_ILLEGALMOVIECRC_A "Because recorded CRC is different,\n there can be the thing that there is not append record normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEVER_A "Because a recorded version is different,\n there can be the thing that there is not append record normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEOLD_A "Because a version of a movie file is old,\n there is not append record."
 END
 
 STRINGTABLE
