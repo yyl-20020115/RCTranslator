@@ -195,7 +195,7 @@ public class Program
             else if (sectionType == SectionType.StringTable)
             {
                 var parts = _line.Split(' ');
-                if (parts.Length == 2)
+                if (parts.Length == 2 && parts[1].StartsWith('"') && parts[1].EndsWith('"'))
                 {
                     parts[1] = parts[1].Trim('"');
                     var result = await CallOllama(apiUrl, $"请翻译:{parts[1]}");
@@ -210,10 +210,6 @@ public class Program
                     writer.WriteLine(line);
                 }
             }
-
-
-
-
             writer.Flush();
         }
 
