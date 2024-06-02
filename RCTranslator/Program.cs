@@ -158,11 +158,28 @@ public class Program
         return result;
     }
     public static string GetHeading(string text) => text[..(text.Length - text.TrimStart().Length)];
+
     public static async Task<int> Main(string[] args)
     {
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
+        Encoding encoding = Encoding.GetEncoding("GB2312");
+
         var sectionType = SectionType.Init;
-        using var writer = new StreamWriter("output.txt", new FileStreamOptions { Access = FileAccess.Write, Mode = FileMode.Create, Share = FileShare.ReadWrite });
-        using var reader = new StreamReader("input.txt", new FileStreamOptions { Share = FileShare.Read });
+        using var writer = new StreamWriter("output.txt",
+            encoding,
+            new FileStreamOptions { 
+                Access = FileAccess.Write, 
+                Mode = FileMode.Create,
+                Share = FileShare.ReadWrite });
+
+        using var reader = new StreamReader("input.txt", 
+            encoding,false, new FileStreamOptions
+            {
+                Access = FileAccess.Read,
+                Mode = FileMode.Open,
+                Share = FileShare.Read
+            });
 
         string? line;
         while ((line = reader.ReadLine()) != null)
