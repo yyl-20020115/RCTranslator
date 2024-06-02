@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RCTranslator": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}
