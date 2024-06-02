@@ -168,6 +168,10 @@ public class Program
 
         var lines = File.ReadAllLines("output.txt", encoding);
         var count = lines.Count();
+        if(count>0 && lines[^1].Trim() != "")
+        {
+            count++;
+        }
         var sectionType = SectionType.Init;
 
         using var writer = new StreamWriter("output.txt",
@@ -185,11 +189,12 @@ public class Program
                 Share = FileShare.Read
             });
 
-        var index = 1;
+        var index = 0;
         string? line;
         while ((line = reader.ReadLine()) != null)
         {
-            var skip = ++index <= count+3;
+            index++;
+            var skip = index <= count;
             Console.WriteLine(line);
             var _head = GetHeading(line);
             var _line = line.Trim();
@@ -230,8 +235,11 @@ public class Program
                 continue;
             }
             if (skip) continue;
-
-            if (sectionType == SectionType.Version)
+            if (sectionType == SectionType.Init)
+            {
+                writer.WriteLine(line);
+            }
+            else if (sectionType == SectionType.Version)
             {
                 if (!_line.StartsWith("//"))
                     writer.WriteLine(line);
