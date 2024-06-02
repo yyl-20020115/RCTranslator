@@ -1188,23 +1188,15 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ERROR_ILLEGALMAPPERNO 
-                            "Mapper please appoint numerical value from 0 to 255."
-    IDS_ERROR_ILLEGALHEADER "Because a NES header is illegal,\n there can be the thing that does not work normally.\nDo execute?"
-    IDS_ERROR_ILLEGALSTATECRC 
-                            "Because recorded CRC is different,\n there is the case that cannot load normally.\nDo load?"
-    IDS_ERROR_ILLEGALMOVIECRC 
-                            "Because recorded CRC is different,\n there can be the thing that cannot playback normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEVER 
-                            "Because a recorded version is different,\n there can be the thing that cannot playback normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEOLD 
-                            "Because a version of a movie file is old, cannot playback."
-    IDS_ERROR_ILLEGALMOVIECRC_A 
-                            "Because recorded CRC is different,\n there can be the thing that there is not append record normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEVER_A 
-                            "Because a recorded version is different,\n there can be the thing that there is not append record normally.\nDo execute?"
-    IDS_ERROR_ILLEGALMOVIEOLD_A 
-                            "Because a version of a movie file is old,\n there is not append record."
+    IDS_ERROR_ILLEGALMAPPERNO "Mapper please appoint numerical value from 0 to 255."
+    IDS_ERROR_ILLEGALHEADER  "Because a NES header is illegal,\n there can be the thing that does not work normally.\nDo execute?"
+    IDS_ERROR_ILLEGALSTATECRC "Because recorded CRC is different,\n there is the case that cannot load normally.\nDo load?"
+    IDS_ERROR_ILLEGALMOVIECRC  "Because recorded CRC is different,\n there can be the thing that cannot playback normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEVER  "Because a recorded version is different,\n there can be the thing that cannot playback normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEOLD  "Because a version of a movie file is old, cannot playback."
+    IDS_ERROR_ILLEGALMOVIECRC_A  "Because recorded CRC is different,\n there can be the thing that there is not append record normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEVER_A  "Because a recorded version is different,\n there can be the thing that there is not append record normally.\nDo execute?"
+    IDS_ERROR_ILLEGALMOVIEOLD_A  "Because a version of a movie file is old,\n there is not append record."
 END
 
 STRINGTABLE
