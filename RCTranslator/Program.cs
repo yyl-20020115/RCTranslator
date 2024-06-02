@@ -190,9 +190,7 @@ public class Program
         while ((line = reader.ReadLine()) != null)
         {
             var skip = ++index <= count+3;
-
             Console.WriteLine(line);
-
             var _head = GetHeading(line);
             var _line = line.Trim();
             if (_line.Length == 0
