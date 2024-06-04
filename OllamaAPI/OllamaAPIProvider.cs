@@ -18,6 +18,10 @@ public static class OllamaAPIProvider
         WriteIndented = true, // 格式化输出
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
     };
+    public static async Task<string> DoCallAPI(string text)
+    {
+        return await DoCallAPI(APIUrl, text);
+    }
 
     public static async Task<string> DoCallAPI(string uri, string text)
     {
@@ -53,6 +57,11 @@ public static class OllamaAPIProvider
         public override string ToString() => this.Message?.ToString() ?? "";
 
     }
+    public static async Task<string> CallOllama(string qeustion, string model = "qwen", string role = "user")
+    {
+        return await CallOllama(APIUrl, qeustion, model, role);
+    }
+
     public static async Task<string> CallOllama(string apiUrl, string qeustion, string model = "qwen", string role = "user")
     {
         var text = JsonSerializer.Serialize(new Request { Model = model, Messages = [new() { Content = qeustion, Role = role }], Stream = false }, options);
